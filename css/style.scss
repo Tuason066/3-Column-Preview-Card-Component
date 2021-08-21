@@ -1,0 +1,134 @@
+// VARIABLE
+
+// Margin
+$Margin-Centered: 0 auto;
+
+// Backgrounds Colors
+$Background--Orange--clr: hsl(31, 77%, 52%);
+$Background--Dark-Cyan--clr: hsl(184, 100%, 22%);
+$Background--Darkest-Cyan--clr: hsl(179, 100%, 13%);
+
+// Text Colors
+$Text--clr: hsla(0, 0%, 100%, 0.75);
+$Headings--clr: hsl(0, 0%, 95%);
+
+// Button
+$Btn--clr: hsl(0, 0%, 95%);
+
+// FONTS
+
+// font-family: 'Big Shoulders Display', cursive;
+// font-family: 'Lexend Deca', sans-serif;
+
+// RESETS
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+// BASE STYLE
+
+h3 {
+    font-size: 2.2rem;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+// MOBILE STYLE
+
+.preview {
+    max-width: 1440px;
+    margin: $Margin-Centered;
+    padding: 2em 0 0 0;
+    background-color: $Btn--clr;
+}
+
+.container {
+    max-width: 350px;
+    margin: $Margin-Centered;
+    width: 90%;
+}
+.card--orange {
+    background-color: $Background--Orange--clr;
+}
+.card--dark-cyan {
+    background-color: $Background--Dark-Cyan--clr;
+}
+.card--darkest-cyan {
+    background-color: $Background--Darkest-Cyan--clr;
+}
+
+.btn--orange {
+    color: $Background--Orange--clr;
+}
+.btn--dark-cyan {
+    color: $Background--Dark-Cyan--clr;
+}
+.btn--darkest-cyan {
+    color: $Background--Darkest-Cyan--clr;
+}
+
+.cards {
+    padding: 3em;
+
+    &__header {
+        color: $Headings--clr;
+        margin: 1em 0;
+    }
+    &__text {
+        color: $Text--clr;
+        line-height: 1.5;
+        margin-bottom: 2em;
+    }
+    &__btn {
+        display: inline-block;
+        padding: .8em 1.8em;
+        background-color: $Btn--clr;
+        font-size: 1rem;
+        font-family: 'Lexend Deca', sans-serif;
+        border-radius: 50px;
+        text-decoration: none;
+        border: 2px solid transparent;
+    }
+    &__btn:hover {
+        background-color: transparent;
+        border: 2px solid $Btn--clr;
+        color: $Btn--clr;
+    }
+}
+
+.footer {
+    max-width: 1440px;
+    margin: $Margin-Centered;
+    text-align: center;
+    padding: 2em 0;
+
+    &__text {
+        width: 90%;
+        margin: $Margin-Centered;
+    }
+}
+
+@media (min-width: 800px) {
+
+    .container {
+        max-width: 940px;
+        display: flex;
+    }
+}
